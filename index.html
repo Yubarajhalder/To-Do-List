@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do-list</title>
+    <script src="script.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .over {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #81B29A;
+        }
+
+        .cont {
+            height: 65vh;
+            width: 30vw;
+            background-color: #3D405B;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            gap: 20px;
+            border: 4px solid #F4F1DE;
+            border-radius: 9px;
+
+        }
+
+        .para {
+            height: 60px;
+            width: 400px;
+            background-color: #F2CC8F;
+            margin-top: 30px;
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+
+        .body {
+            display: flex;
+            margin-top: 10px;
+            gap: 10px;
+            margin-left: 30px;
+        }
+
+        .body input {
+            width: 270px;
+            height: 42px;
+            border-radius: 7px;
+            text-align: center;
+            font-size: 15px;
+            transition: background-color 0.3s, border 0.3s;
+        }
+
+        .body input:hover {
+            background-color: #f0f0f0;
+            border: 1px solid #007bff;
+        }
+
+        .body input:active {
+            background-color: #e0e0e0;
+            border: 1px solid #0056b3;
+            transform: translateY(1px);
+        }
+
+        .body button {
+            height: 42px;
+            width: 100px;
+            border-radius: 7px;
+            background-color: #E07A5F;
+            border: 2px solid transparent;
+            font-size: 15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transition: background-color 0.3s, border 0.3s;
+        }
+
+        .body button:hover {
+            background-color: #FFA07A;
+            border: 2px solid #FF8C00;
+        }
+
+        .body button:active {
+            background-color: #FF8C00;
+            border: 2px solid #FF69B4;
+            transform: translateY(1px);
+        }
+
+        .txt {
+            margin: 22px;
+            height: 37vh;
+            width: 400px;
+            background-color: #e0e0e0;
+
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+
+        .txt ul {
+            margin-top: 20px;
+            height: 50px;
+            width: 360px;
+            background-color: #F2CC8F;
+            list-style-type: none;
+            display: flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .txt ul li {
+
+            position: absolute;
+            left: 602px;
+            font-size: 22px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+
+        .txt ul div {
+            position: absolute;
+            right: 622px;
+            height: 35px;
+            width: 35px;
+            background-color: #ff2a00;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .txt ul div:active {
+            background-color: #ff3737;
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="over">
+        <div class="cont">
+            <p class="para">To-Do-List</p>
+            <div class="main">
+                <div class="body">
+                    <input type="text" placeholder="Enter Your Task" id="inp">
+                    <button class="add" onclick="Add()">ADD</button>
+                </div>
+                <div class="txt">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
